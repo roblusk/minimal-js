@@ -9,12 +9,27 @@
   <li id="sfo" class="west">San Francisco</li>
 </ul>
 
+<div id="bye">Click me</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
 <script>
   // Write your JS here.
   // Open the JS console and refresh the page to see the output.
+  $(document).ready(function() {
+    $("body").on("click", "#bye", function() {
+      $(".west").slideToggle();
+    });
+
+    let chi = $("#ord");
+    chi.fadeToggle(5000, function() {
+      this.remove();
+    });
   
-  
-  
+  });
   
   // Fizz buzz
   /*
